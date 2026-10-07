@@ -57,10 +57,18 @@ def test_manufacturer_aliases():
 
 def test_xlsx_raw_reader_matches_openpyxl_cells():
     # The fallback used when openpyxl rejects a workbook must still read the cells.
-    from agent import config, ingest
-    data = (config.DATA_DIR / "order_docs/07-crescent-sensors/PO PO-CRE26-0021.xlsx").read_bytes()
-    raw = ingest._xlsx_text_raw(data)
-    for cell in ("B2=PO-CRE26-0021", "C13=1N3002B", "B13=CRE-16878", "E11=6000"):
+    import io
+
+    import openpyxl
+
+    from agent import ingest
+    wb = openpyxl.Workbook()
+    ws = wb.active
+    ws["B2"], ws["C13"], ws["B13"], ws["E11"] = "PO-TEST-0001", "1N3002B", "CUST-123", 6000
+    buf = io.BytesIO()
+    wb.save(buf)
+    raw = ingest._xlsx_text_raw(buf.getvalue())
+    for cell in ("B2=PO-TEST-0001", "C13=1N3002B", "B13=CUST-123", "E11=6000"):
         assert cell in raw
 
 
