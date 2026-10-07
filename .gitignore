@@ -1,0 +1,13 @@
+data
+.env
+.venv/
+__pycache__/
+*.pyc
+store/
+# task.md contains credentials from the trial brief
+task.md
+.DS_Store
+server/.venv/
+server/store/
+client/node_modules/
+client/dist/

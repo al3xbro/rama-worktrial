@@ -1,0 +1,348 @@
+{
+ "_about": "Hand-verified expected findings for the 14 trial orders (PLAN.md Appendix A), limited to built check families. Supply/lead-time/vendor/flow-down expectations were written from the hand analysis before those checks were run. Each entry: check_id, optional line (SO line), optional title_contains, expected status. `not_built` lists known issues not caught yet.",
+ "503097": {
+  "name": "Meridian",
+  "expect": [
+   {
+    "check_id": "H.payment_terms",
+    "status": "fail"
+   },
+   {
+    "check_id": "R.partials",
+    "status": "fail"
+   },
+   {
+    "check_id": "R.external_terms",
+    "status": "unverifiable"
+   },
+   {
+    "check_id": "S.ready",
+    "line": 1,
+    "status": "fail"
+   },
+   {
+    "check_id": "S.unrequested",
+    "status": "needs_review"
+   },
+   {
+    "check_id": "F.date_code",
+    "status": "fail"
+   }
+  ],
+  "not_built": []
+ },
+ "503105": {
+  "name": "Northstar",
+  "expect": [
+   {
+    "check_id": "R.quality_clause_codes",
+    "status": "unverifiable"
+   },
+   {
+    "check_id": "R.external_terms",
+    "status": "unverifiable"
+   },
+   {
+    "check_id": "Q.link",
+    "status": "unverifiable"
+   }
+  ],
+  "not_built": [
+   "PO unsigned"
+  ]
+ },
+ "503153": {
+  "name": "Quarry",
+  "expect": [
+   {
+    "check_id": "H.payment_terms",
+    "status": "fail"
+   },
+   {
+    "check_id": "H.incoterm",
+    "status": "fail"
+   },
+   {
+    "check_id": "R.ack_fields",
+    "status": "fail"
+   },
+   {
+    "check_id": "R.origin",
+    "line": 5,
+    "status": "needs_approval"
+   },
+   {
+    "check_id": "R.origin",
+    "line": 1,
+    "status": "unverifiable"
+   },
+   {
+    "check_id": "A.eccn",
+    "line": 1,
+    "status": "needs_approval"
+   },
+   {
+    "check_id": "R.terms_acceptance",
+    "status": "needs_review"
+   },
+   {
+    "check_id": "R.inspection_rights",
+    "status": "needs_review"
+   },
+   {
+    "check_id": "F.date_code",
+    "status": "needs_review"
+   },
+   {
+    "check_id": "F.coc",
+    "status": "needs_review"
+   },
+   {
+    "check_id": "F.packaging",
+    "status": "needs_review"
+   },
+   {
+    "check_id": "R.payment_fees",
+    "status": "needs_review"
+   },
+   {
+    "check_id": "R.governing_law",
+    "status": "needs_review"
+   }
+  ],
+  "not_built": [
+   "line 3 origin: lot says MX (zero balance) vs item default CN"
+  ]
+ },
+ "503156": {
+  "name": "Pinecrest",
+  "expect": [
+   {
+    "check_id": "R.external_terms",
+    "status": "unverifiable"
+   },
+   {
+    "check_id": "S.stock",
+    "line": 3,
+    "status": "fail"
+   },
+   {
+    "check_id": "S.ready",
+    "line": 1,
+    "status": "needs_review"
+   }
+  ],
+  "not_built": []
+ },
+ "503085": {
+  "name": "Copperfield",
+  "expect": [
+   {
+    "check_id": "L.qty",
+    "line": 1,
+    "status": "fail"
+   },
+   {
+    "check_id": "H.carrier_account",
+    "status": "fail"
+   },
+   {
+    "check_id": "S.ready",
+    "line": 2,
+    "status": "fail"
+   },
+   {
+    "check_id": "S.ready",
+    "line": 3,
+    "status": "fail"
+   },
+   {
+    "check_id": "S.cost",
+    "line": 3,
+    "status": "fail"
+   },
+   {
+    "check_id": "S.unrequested",
+    "status": "needs_review"
+   },
+   {
+    "check_id": "F.date_code",
+    "status": "fail"
+   },
+   {
+    "check_id": "F.coc",
+    "status": "fail"
+   },
+   {
+    "check_id": "F.trace",
+    "status": "needs_review"
+   },
+   {
+    "check_id": "F.defense",
+    "status": "needs_review"
+   }
+  ],
+  "not_built": [
+   "vendor V1212 ISO cert expires 9/26 (reported as info, within 30 days)"
+  ]
+ },
+ "503102": {
+  "name": "Cobalt",
+  "expect": [
+   {
+    "check_id": "L.price",
+    "line": 3,
+    "status": "fail"
+   },
+   {
+    "check_id": "Q.price",
+    "line": 3,
+    "status": "needs_approval"
+   },
+   {
+    "check_id": "L.cust_pn",
+    "line": 3,
+    "status": "fail"
+   },
+   {
+    "check_id": "S.ready",
+    "line": 1,
+    "status": "needs_review"
+   },
+   {
+    "check_id": "S.ready",
+    "line": 4,
+    "status": "needs_review"
+   }
+  ],
+  "not_built": []
+ },
+ "503170": {
+  "name": "Crescent",
+  "expect": [
+   {
+    "check_id": "H.payment_terms",
+    "status": "fail"
+   },
+   {
+    "check_id": "A.credit",
+    "status": "needs_approval"
+   }
+  ],
+  "not_built": []
+ },
+ "503178": {
+  "name": "Sandstone",
+  "expect": [
+   {
+    "check_id": "H.ship_to",
+    "status": "fail"
+   },
+   {
+    "check_id": "A.credit",
+    "status": "needs_approval"
+   }
+  ],
+  "not_built": []
+ },
+ "503137": {
+  "name": "Ospreyfield",
+  "expect": [
+   {
+    "check_id": "L.mpn",
+    "line": 2,
+    "status": "fail"
+   },
+   {
+    "check_id": "R.yield",
+    "status": "needs_approval"
+   },
+   {
+    "check_id": "A.credit",
+    "status": "needs_approval"
+   },
+   {
+    "check_id": "S.vendor",
+    "title_contains": "V1074",
+    "status": "needs_review"
+   },
+   {
+    "check_id": "S.vendor",
+    "title_contains": "V1118",
+    "status": "needs_review"
+   }
+  ],
+  "not_built": []
+ },
+ "503180": {
+  "name": "Norwood",
+  "expect": [
+   {
+    "check_id": "R.partials",
+    "status": "pass"
+   },
+   {
+    "check_id": "S.vendor",
+    "title_contains": "V1246",
+    "status": "needs_review"
+   }
+  ],
+  "not_built": []
+ },
+ "503144": {
+  "name": "Oakridge",
+  "expect": [
+   {
+    "check_id": "H.payment_terms",
+    "status": "fail"
+   },
+   {
+    "check_id": "R.ack_fields",
+    "status": "fail"
+   },
+   {
+    "check_id": "R.external_terms",
+    "status": "unverifiable"
+   },
+   {
+    "check_id": "S.stock",
+    "line": 2,
+    "status": "needs_review"
+   }
+  ],
+  "not_built": []
+ },
+ "503107": {
+  "name": "Granite Peak",
+  "expect": [
+   {
+    "check_id": "Q.link",
+    "status": "unverifiable"
+   },
+   {
+    "check_id": "S.ready",
+    "line": 1,
+    "status": "fail"
+   }
+  ],
+  "not_built": []
+ },
+ "503184": {
+  "name": "Hollowbrook",
+  "expect": [
+   {
+    "check_id": "S.ready",
+    "line": 2,
+    "status": "fail"
+   }
+  ],
+  "not_built": [
+   "PO unsigned"
+  ]
+ },
+ "503095": {
+  "name": "Ironclad (clean control)",
+  "expect": [],
+  "not_built": []
+ }
+}
